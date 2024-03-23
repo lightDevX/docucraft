@@ -1,6 +1,6 @@
+import Header from "@/components/Header";
 import { getDocuments } from "@/lib/docs";
 import { Inter } from "next/font/google";
-import Header from "./components/Header";
 import "./globals.css";
 
 
