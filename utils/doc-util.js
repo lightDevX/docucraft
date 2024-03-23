@@ -1,11 +1,14 @@
-export function getDocumentByCategory(docs, category) {
+export function getDocumentsByCategory(docs, category) {
     return docs.filter(doc => doc.category === category);
 }
 
-export function getDocumentByAuthor(docs, author) {
+
+export function getDocumentsByAuthor(docs, author) {
     return docs.filter(doc => encodeURI(doc.author) === author);
 }
 
-export function getDocumentByTag(docs, tag) {
+
+export function getDocumentsByTag(docs, tag) {
     return docs.filter(doc => doc.tags.some(inputTag => inputTag === tag));
 }
+
