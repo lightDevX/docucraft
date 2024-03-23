@@ -27,6 +27,7 @@ const ContentDisplay = async ({ id }) => {
       <div
         className="lead"
         dangerouslySetInnerHTML={{ __html: documentContent.contentHtml }} />
+      {/* set innerHtml useing bye dangerouslySetInnerHTML */}
     </article>
   )
 }
