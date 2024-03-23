@@ -1,6 +1,28 @@
+'use client'
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 const Sidebar = ({ docs }) => {
+
+    const pathName = usePathname();
+
+    useEffect(() => {
+
+        let matchedDocs = docs;
+        if (pathName.includes('/tag')) {
+            const tag = pathName.split('/')[2];
+        }
+        else if (pathName.includes('/authors')) {
+            const author = pathName.split('/')[2];
+        }
+        else if (pathName.includes('/categories')) {
+            const category = pathName.split('/')[2];
+        }
+
+
+    }, [pathName]);
+
     const roots = docs.filter((doc) => !doc.parent);
     console.log({ roots });
 
