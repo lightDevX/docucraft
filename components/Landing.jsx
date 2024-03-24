@@ -30,10 +30,10 @@ const Landing = () => {
             <div className="relative lg:col-span-3">
               <Image
                 src="/banner.png"
-                width="1600"
-                height="1280"
+                width="786"
+                height="512"
                 alt="banner"
-                className="relative z-20 -mb-36 aspect-[853/682] max-w-[630px] rounded-xl bg-slate-200 shadow-xl shadow-black/5 ring-1 ring-slate-900/5 sm:-mb-16 lg:-mb-8 xl:-mb-16"
+                className="relative z-20 -mb-30 aspect-[853/682] max-w-[512px] rounded-xl bg-slate-200 shadow-xl shadow-black/5 ring-1 ring-slate-900/5 sm:-mb-16 lg:-mb-8 xl:-mb-16"
               />
             </div>
           </div>
