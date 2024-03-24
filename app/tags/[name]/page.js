@@ -1,10 +1,14 @@
+import ContentDisplay from "@/components/ContentDisplay";
+import { getDocuments } from "@/lib/docs";
+import { getDocumentsByTag } from "@/utils/doc-util";
 
 const TagPage = ({ params: { name } }) => {
-    return (
-        <div>
-            {name}
-        </div>
-    );
-};
+    const docs = getDocuments();
+    const matchedDocuments = getDocumentsByTag(docs, name);
 
-export default TagPage;
+    return (
+        <ContentDisplay id={matchedDocuments[0].id} />
+    )
+}
+
+export default TagPage

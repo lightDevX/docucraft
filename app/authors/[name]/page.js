@@ -1,10 +1,12 @@
+import ContentDisplay from "@/components/ContentDisplay";
+import { getDocuments } from "@/lib/docs";
+import { getDocumentsByAuthor } from "@/utils/doc-util";
 
-const AuthorsPage = ({ params: { name } }) => {
-    return (
-        <div>
-            {name}
-        </div>
-    );
+
+const AuthorPage = ({ params: { name } }) => {
+    const docs = getDocuments();
+    const matchedDocs = getDocumentsByAuthor(docs, name);
+    return <ContentDisplay id={matchedDocs[0].id} />;
 };
 
-export default AuthorsPage;
+export default AuthorPage;
